@@ -1,211 +1,398 @@
 body {
-    font-family: 'Mukta', sans-serif;
-    margin: 0;
+  font-family: 'Alegreya', serif;
+  margin: 0;
 }
 
-  
+.image,
+#bg,
+.overlay {
+  width: 100%;
+}
+
+.image,
+.about-container {
+  position: relative;
+  overflow: hidden;
+}
+
+#bg,
+.overlay {
+  height: 100%;
+}
+
+/* HEADER */
+.image {
+  height: calc(50vh - 40px);
+}
+
+#bg {
+  object-fit: cover;
+  opacity: 0.8;
+}
+
+/* navigation */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu {
+  display: flex;
+  list-style: none;
+  padding: 0px;
+}
+
+.menu li {
+  margin: 0 10px;
+  transition: transform .1s;
+}
+
+.menu li:hover {
+  transform: scale(1.1);
+}
+
+.menu li a:hover {
+  opacity: 1;
+}
+
+.menu li a {
+  color: #fff;
+  text-decoration: none;
+  opacity: .9;
+  transition: opacity .1s;
+  font-size: .9em;
+}
+
+#me {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 1px solid #373737;
+}
+
+/* overlay text */
+.overlay,
+.card-text,
+.list-group-item,
+.edu,
+.contact {
+  display: flex;
+}
+
+.overlay, 
+.card-text,
+.list-group-item {
+  flex-direction: column;
+}
+
+.overlay,
+.row,
+.card-text {
+  align-items: center;
+}
+
+.overlay,
+.contact {
+  justify-content: center;
+}
+
+.overlay,
+h2,
+h4 {
+  font-weight: 600;
+}
+
+.overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  text-align: center;
+}
+
+h3,
+.card-text a,
+.contact {
+  margin-top: 10px;
+}
+
+h3 {
+  font-size: 1em;
+  margin-right: 50px;
+  margin-left: 50px;
+}
+
+/* social media icons */
+a.social,
+.card-text a {
+  display: inline-block;
+}
+
+a.social {
+  text-indent: -9999px;
+  margin-left: 5px;
+  width: 30px;
+  height: 30px;
+  background-size: 30px 30px;
+  opacity: .4;
+  transition: all .5s;
+}
+
+a.social:hover {
+  opacity: 1;
+}
+
+a.twitter-header {
+  background-image: url(svg/twitter2.svg);
+}
+
+a.github-header {
+  background-image: url(svg/github2.svg);
+}
+
+/* MAIN */
+h2 {
+  margin: 20px 0px;
+}
+
+main,
+footer {
+  font-size: 1.1em;
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
+/* about me */
+.about-container {
+  max-height: 75px;
+}
+
+/* show more button */
+.show-more-btn {
+  padding: 5px;
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 10px;
+  font-size: 1.1rem;
+}
+
+.show-more-btn:hover,
+.show-more-btn:active{
+  color: white;
+}
+
+.show-more-btn:hover {
+  background-color: #ADADAD;
+  border: none;
+}
+
+.show-more-btn:active {
+  background-color: #3c3c3c;
+}
+
+/* my work */
+/* spacing of cards inside section */
+.row {
+  width: 90%;
+  margin: auto;
+  justify-content: space-around;
+}
+
+.col,
+.card,
+.contact {
+  padding: 0px;
+} 
+
+/* spacing of elements inside card */
+.card {
+  border-radius: 10px;
+}
+
+.card-img-top {
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+}
+
+.card-text,
+.edu {
+  justify-content: space-between;
+}
+
+.card-text {
+  padding: 20px;
+  flex: 1;
+}
+
+.card-text p,
+.card-text a,
+.edu-font {
+  font-size: 0.9em;
+}
+
+.edu p,
+.edu-font,
+.card-text p {
+  margin-bottom: 0px;
+}
+
+.card-text a {
+  color: #fff;
+  padding: 5px 10px;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.buttons{
+  display: flex;
+  justify-content: space-between;
+}
+
+.buttons a {
+  font-size: .8em;
+}
+
+.buttons a:first-of-type {
+  margin-right: 10px;
+}
+/* customization of every card and button */
+.first-card {
+  color: #057202;
+  background-color: #CDF9CC;
+  margin-bottom: 0px;
+}
+
+.first-btn {
+  background-color: #057202;
+}
+
+.second-card {
+  color: #2572aa;
+  background-color: #E3f3f5;
+}
+
+.second-btn {
+  background-color: #2572aa;
+}
+
+.third-card {
+  color: #163a45;
+  background-color: #F1fec8;
+}
+
+.third-btn {
+  background-color: #163a45;
+}
+
+.fourth-card {
+  border: 1px solid #ADADAD;
+}
+
+.fourth-btn {
+  background-color: #ADADAD;
+}
+
+.fifth-card {
+  color: #4d85be;
+  background-color: #Efefef;
+}
+
+.fifth-btn {
+  background-color: #4d85be;
+}
+
+.sixth-card {
+  color: #7477bf;
+  border: 1px solid #7477bf;
+  background-color: #Efefff;
+}
+
+.sixth-btn {
+  background-color: #7477bf;
+}
+
+.seventh-card {
+  background-color: #Fcfcfc;
+  color: #3c3c3c;
+  border: 1px solid #3c3c3c;
+}
+
+.seventh-btn {
+  background-color: #3c3c3c;
+}
+
+/* education */
+
+.edu-font {
+  font-style: italic;
+}
+
+/* FOOTER */
+/* contact */
+.contact {
+  list-style: none;
+}
+
+a.twitter-footer {
+  background-image: url(svg/twitter.svg);
+}
+
+a.github-footer {
+  background-image: url(svg/github.svg);
+}
+
+.phone {
+  margin-bottom: 5px;
+}
+
+@media screen and (min-width: 720px) {
+  /* HEADER */
+  #me {
+    width: 200px;
+    height: 200px;
+  }
+
   .image {
-    width: 100%;
-    height: calc(50vh - 40px);
-    position: relative;
-    overflow: hidden;
-  }
-  
-  .image img {
-    width: 100%;
+    width: 40%;
     height: 100%;
-    object-fit: cover;
+    margin-right: 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
   }
-  
-  .overlay {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 100%;
-    height: 100%;
-    color: #fff;
-    text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+
+  nav {
+    margin-bottom: 70px;
   }
-  
-  
-  .content {
-    margin: 15px;
-    font-size: 1.1em;
-    color: #ADADAD;
+
+  h3 {
+    margin-top: 20px;
+    font-size: 1.4em;
+  }
+
+  /* MAIN */
+  main {
+    margin-top: 100px;
+  }
+
+  main,
+  footer {
+  margin-left: 45%;
+  margin-right: 5%;
   }
 
   .row {
-    width: 90%;
-    margin: auto;
-  }
-  
-  h2 {
-    margin: 20px 0px;
-    font-weight: 600;
-  }
-
-  h4{
-    font-weight: 600;
-  }
-
-  .card-text p {
-    font-size: 0.9em;
-  }
-
-  .about-container {
-    position: relative;
-    max-height: 75px;
-    overflow: hidden;
-  }
+    width: 100%;
+  } 
 
   .card {
-    padding: 0px;
-    font-size: .7em;
+    min-height: 500px;
   }
 
-  .card-title {
-    font-weight: 600;
-    font-size: 1.2em;
+  /* FOOTER */
+  .overlay .contact {
+    margin-bottom: 110px;
   }
-  
-  .card-body a{
-    font-size: 1em;
-  }
-
-  .first-card {
-    color: #057202;
-    background-color: #CDF9CC;
-  }
-
-  .second-card {
-    color: #2572aa;
-    background-color: #E3f3f5;
-  }
-
-  .second-btn {
-    background-color: #2572aa;
-  }
-
-  .third-card {
-    color: #163a45;
-    background-color: #F1fec8;
-  }
-
-  .third-btn {
-    background-color: #163a45;
-  }
-
-  .fourth-card {
-    border: 1px solid #ADADAD;
-  }
-
-  .fourth-btn {
-    background-color: #ADADAD;
-  }
-
-  .fifth-card {
-    color: #4d85be;
-    background-color: #Efefef;
-  }
-
-  .fifth-btn {
-    background-color: #4d85be;
-  }
-
-  .sixth-card {
-    background-color: #Fcfcfc;
-    color: #3c3c3c;
-  }
-
-  .col {
-    padding: 0px;
-  }
-
-  .row {
-    justify-content: space-around;
-    align-items: center;
-  }
-
-  
-  .card-text {
-    padding: 20px;
-  }
-  
-  .card-text h2 {
-    margin-top: 0;
-  }
-  
-  .card-text p {
-    margin-bottom: 0;
-  }
-  
-  .card-text a {
-    display: inline-block;
-    margin-top: 10px;
-    color: #fff;
-    padding: 5px 10px;
-    text-decoration: none;
-    border-radius: 5px;
-    font-size: 0.9em;
-  }
-
-  .first-btn {
-    background-color: #057202;
-  }
-
-  .mycard {
-    padding: 0px;
-    border-radius: 10px;
-    min-height: 450px;
-  }
-
-  .card-img-top {
-    border-top-right-radius: 10px;
-    border-top-left-radius: 10px;
-  }
-  
-  @media screen and (min-width: 720px) {
-    .containerr {
-      flex-direction: row;
-    }
-    /* .card {
-        width: 250px;
-    } */
-    .image {
-      width: 40%;
-      height: 100%;
-      margin-right: 20px;
-      position: fixed;
-      top: 0;
-      left: 0;
-    }
-    .row {
-      width: 100%;
-      
-    }
-    .overlay h3 {
-        margin-top: 100px;
-    }
-    /* .image img {
-      height: 100%;
-    } */
-  
-    .content {
-      margin-top: 100px;
-      margin-left: 45%;
-      margin-right: 5%;
-    }
-  
-
-  }
-/*   
-  @media screen and (min-width: 320px) {
-    .image {
-      height: calc(33.33vw - 40px);
-    }
-  } */
-  
+}
