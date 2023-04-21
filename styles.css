@@ -65,8 +65,8 @@ nav {
 }
 
 #me {
-  width: 150px;
-  height: 150px;
+  width: 112px;
+  height: 112px;
   border-radius: 50%;
   border: 1px solid #373737;
 }
@@ -119,7 +119,7 @@ h3,
 }
 
 h3 {
-  font-size: 1em;
+  font-size: 12px;
   margin-right: 50px;
   margin-left: 50px;
 }
@@ -370,6 +370,10 @@ a.github-footer {
   h3 {
     margin-top: 20px;
     font-size: 1.4em;
+  }
+
+  .meet {
+    margin-top: 5px;
   }
 
   /* MAIN */
